@@ -16,9 +16,9 @@
 			:key="index"
 		>
 			<span
-				:class="{ done: todo.done }"
-				@click="doneTodo(todo)"
+				:class="{ done: todo.done }"				
 			>{{ todo.content }}</span>
+			<button @click="doneTodo(todo)">Done</button>
 			<button @click="removeTodo(index)">Remove</button>
 		</li>
 	</ul>
@@ -33,7 +33,7 @@
 			const newTodo = ref('');
 			const defaultData = [{
 				done: false,
-				content: 'Write a blog post'
+				content: 'Please write an awesome new post'
 			}]
 			const todosData = JSON.parse(localStorage.getItem('todos')) || defaultData;
 			const todos = ref(todosData);
@@ -88,8 +88,8 @@ $size4: 24px;
 $size5: 48px;
 $backgroundColor: #27292d;
 $textColor: white;
-$primaryColor: #a0a4d9;
-$secondTextColor: #1f2023;
+$primaryColor: #ccff15;
+$secondTextColor: #a7cc23;
 body {
 	margin: 0;
 	padding: 0;
